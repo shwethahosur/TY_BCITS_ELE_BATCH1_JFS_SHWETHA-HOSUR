@@ -1,14 +1,6 @@
 1. show databases;
-sql>
-+--------------------+
-| Database           |
-+--------------------+
-| information_schema |
-| bcits              |
-| mysql              |
-| performance_schema |
-| sys                |
-+--------------------+
+
+
 
 2.use bcits;
 sql>
@@ -28,422 +20,147 @@ Query OK, 1 row affected (0.35 sec)
 sql>
 
 6.select * from customer;
-sql>
-+-----+----------+-----------+-------------------+
-| cid | name     | mobilenum | email             |
-+-----+----------+-----------+-------------------+
-|   1 | shwetha  |  97997987 | shwe123@gmail.com |
-|   2 | veeksha  |   6987797 | vee@gmail.com     |
-|   3 | seema    |   8798798 | see@gmail.com     |
-|   4 | vidya    |   4857899 | vidya@gmail.com   |
-|   5 | srilekha | 879899797 | sri@gmail.com     |
-+-----+----------+-----------+-------------------+
 
 
 7. alter Table customer add product varchar(20);
-sql>
-+-----+----------+-----------+-------------------+---------+
-| cid | name     | mobilenum | email             | product |
-+-----+----------+-----------+-------------------+---------+
-|   1 | shwetha  |  97997987 | shwe123@gmail.com | NULL    |
-|   2 | veeksha  |   6987797 | vee@gmail.com     | NULL    |
-|   3 | seema    |   8798798 | see@gmail.com     | NULL    |
-|   4 | vidya    |   4857899 | vidya@gmail.com   | NULL    |
-|   5 | srilekha | 879899797 | sri@gmail.com     | NULL    |
-+-----+----------+-----------+-------------------+---------+
 
 8.alter Table customer drop product;
-sql>
-+-----+----------+-----------+-------------------+
-| cid | name     | mobilenum | email             |
-+-----+----------+-----------+-------------------+
-|   1 | shwetha  |  97997987 | shwe123@gmail.com |
-|   2 | veeksha  |   6987797 | vee@gmail.com     |
-|   3 | seema    |   8798798 | see@gmail.com     |
-|   4 | vidya    |   4857899 | vidya@gmail.com   |
-|   5 | srilekha | 879899797 | sri@gmail.com     |
-+-----+----------+-----------+-------------------+
 
 9.create database testyantra;
-sql>
-+--------------------+
-| Database           |
-+--------------------+
-| information_schema |
-| bcits              |
-| mysql              |
-| performance_schema |
-| sys                |
-| testyantra         |
-+--------------------+
+
 
 10.drop database testyantra;
-sql>
-11.show databases;
-+--------------------+
-| Database           |
-+--------------------+
-| information_schema |
-| bcits              |
-| mysql              |
-| performance_schema |
-| sys                |
-+--------------------+
+
 
 12.truncate table student;
-sql>
-Empty set (0.00 sec)
 
 
 13.rename table student to emp;
-sql>
-Empty set (0.00 sec)
 
 14.alter Table customer change name cname varchar(200);
-sql>
-Empty set (0.00 sec)
+
 
 
 
 OPERATORS
 1.arithmatic operators
 select 10+20;
-+-------+
-| 10+20 |
-+-------+
-|    30 |
-+-------+
 
 
-mysql> select 20-10;
-+-------+
-| 20-10 |
-+-------+
-|    10 |
-+-------+
+2.select 20-10;
 
 
 
-mysql> select 20/10;
-+--------+
-| 20/10  |
-+--------+
-| 2.0000 |
-+--------+
+
+3. select 20/10;
 
 
-mysql> select 20*10;
-+-------+
-| 20*10 |
-+-------+
-|   200 |
-+-------+
+4. select 20*10;
 
-
-mysql> select 20%10;
-+-------+
-| 20%10 |
-+-------+
-|     0 |
-+-------+
-
-
-
+5. select 20%10;
 
 mysql>  insert into employee
     -> values(3,'sushma',8568945231,'sushma123@gmail.com','1997-01-11','software developer',16000,10,'2019-02-21','b+','F');
-Query OK, 1 row affected (0.06 sec)
+
 
 mysql>  insert into employee
     -> values(4,'akshata',8988596741,'akshata123@gmail.com','1997-05-27','tester',14000,30,'2019-03-01','a+','F');
-Query OK, 1 row affected (0.33 sec)
+
 
 mysql> insert into employee
     ->  values(5,'shoba',8586845623,'shoba123@gmail.com','1997-10-30','tester',18000,20,'2019-12-05','ab','F');
-Query OK, 1 row affected (0.08 sec)
+
 
 mysql> insert into employee
     -> values(6,'veeksha',8142536143,'veeksha123@gmail.com','1965-10-30','developer',18000,10,'2019-02-05','b+','F');
-Query OK, 1 row affected (0.06 sec)
 
 mysql> insert into employee
     -> values(7,'chandru',8521478963,'chandru123@gmail.com','1925-10-30','clerk',18000,10,'2019-02-05','b+','M');
-Query OK, 1 row affected (0.06 sec)
 
 mysql> insert into employee
     ->  values(8,'manjunath',8412536143,'manjunath123@gmail.com','1985-10-20','manager',15100,30,'2009-02-05','ab+','M');
-Query OK, 1 row affected (0.33 sec)
 
 mysql>  insert into employee
     -> values(9,'shivu',9552845623,'shivu123@gmail.com','1995-10-30','clerk',15000,40,'2019-12-05','ab+','M');
-Query OK, 1 row affected (0.08 sec)
 
 mysql> insert into employee
     -> values(10,'santosh',9125364713,'santosh123@gmail.com','1997-11-30','analyst',2800,20,'2009-02-05','ab-','M');
-Query OK, 1 row affected (0.35 sec)
 
 mysql> select * from employee;
-+-----+-----------+------------+------------------------+------------+--------------------+----------+--------+------------+------------+--------+
-| eid | name      | mobileno   | emailid                | Dob        | designation        | salary   | deptid | doj        | bloodgroup | gender |
-+-----+-----------+------------+------------------------+------------+--------------------+----------+--------+------------+------------+--------+
-|   1 | shwetha   | 8988542635 | shwetha123@gmail.com   | 1997-05-28 | software developer | 15000.00 |     10 | 2019-02-01 | b+         | F      |
-|   2 | girija    | 8586845623 | girija123@gmail.com    | 1995-10-30 | tester             | 18000.00 |     10 | 2019-02-05 | b+         | F      |
-|   3 | sushma    | 8568945231 | sushma123@gmail.com    | 1997-01-11 | software developer | 16000.00 |     10 | 2019-02-21 | b+         | F      |
-|   4 | akshata   | 8988596741 | akshata123@gmail.com   | 1997-05-27 | tester             | 14000.00 |     30 | 2019-03-01 | a+         | F      |
-|   5 | shoba     | 8586845623 | shoba123@gmail.com     | 1997-10-30 | tester             | 18000.00 |     20 | 2019-12-05 | ab         | F      |
-|   6 | veeksha   | 8142536143 | veeksha123@gmail.com   | 1965-10-30 | developer          | 18000.00 |     10 | 2019-02-05 | b+         | F      |
-|   7 | chandru   | 8521478963 | chandru123@gmail.com   | 1925-10-30 | clerk              | 18000.00 |     10 | 2019-02-05 | b+         | M      |
-|   8 | manjunath | 8412536143 | manjunath123@gmail.com | 1985-10-20 | manager            | 15100.00 |     30 | 2009-02-05 | ab+        | M      |
-|   9 | shivu     | 9552845623 | shivu123@gmail.com     | 1995-10-30 | clerk              | 15000.00 |     40 | 2019-12-05 | ab+        | M      |
-|  10 | santosh   | 9125364713 | santosh123@gmail.com   | 1997-11-30 | analyst            |  2800.00 |     20 | 2009-02-05 | ab-        | M      |
-+-----+-----------+------------+------------------------+------------+--------------------+----------+--------+------------+------------+--------+
-10 rows in set (0.06 sec)
+
 
 
 11.select distinct deptid from employee;
 
-+--------+
-| deptid |
-+--------+
-|     10 |
-|     30 |
-|     20 |
-|     40 |
-+--------+
+
 
 12.select distinct deptid,designation from employee;
 
-+--------+--------------------+
-| deptid | designation        |
-+--------+--------------------+
-|     10 | software developer |
-|     10 | tester             |
-|     30 | tester             |
-|     20 | tester             |
-|     10 | developer          |
-|     10 | clerk              |
-|     30 | manager            |
-|     40 | clerk              |
-|     20 | analyst            |
-+--------+--------------------+
 
 13. select * from employee
     -> where designation='software developer';
-+-----+---------+------------+----------------------+------------+--------------------+----------+--------+------------+------------+--------+
-| eid | name    | mobileno   | emailid              | Dob        | designation        | salary   | deptid | doj        | bloodgroup | gender |
-+-----+---------+------------+----------------------+------------+--------------------+----------+--------+------------+------------+--------+
-|   1 | shwetha | 8988542635 | shwetha123@gmail.com | 1997-05-28 | software developer | 15000.00 |     10 | 2019-02-01 | b+         | F      |
-|   3 | sushma  | 8568945231 | sushma123@gmail.com  | 1997-01-11 | software developer | 16000.00 |     10 | 2019-02-21 | b+         | F      |
-+-----+---------+------------+----------------------+------------+--------------------+----------+--------+------------+------------+--------+
-
 
 14.select name,mobileno from employee
     ->  where salary>15000;
-+-----------+------------+
-| name      | mobileno   |
-+-----------+------------+
-| girija    | 8586845623 |
-| sushma    | 8568945231 |
-| shoba     | 8586845623 |
-| veeksha   | 8142536143 |
-| chandru   | 8521478963 |
-| manjunath | 8412536143 |
-+-----------+------------+
+
 
 
 
 15. select * from employee
     -> where salary<=25000;
-+-----+-----------+------------+------------------------+------------+--------------------+----------+--------+------------+------------+--------+
-| eid | name      | mobileno   | emailid                | Dob        | designation        | salary   | deptid | doj        | bloodgroup | gender |
-+-----+-----------+------------+------------------------+------------+--------------------+----------+--------+------------+------------+--------+
-|   1 | shwetha   | 8988542635 | shwetha123@gmail.com   | 1997-05-28 | software developer | 15000.00 |     10 | 2019-02-01 | b+         | F      |
-|   2 | girija    | 8586845623 | girija123@gmail.com    | 1995-10-30 | tester             | 18000.00 |     10 | 2019-02-05 | b+         | F      |
-|   3 | sushma    | 8568945231 | sushma123@gmail.com    | 1997-01-11 | software developer | 16000.00 |     10 | 2019-02-21 | b+         | F      |
-|   4 | akshata   | 8988596741 | akshata123@gmail.com   | 1997-05-27 | tester             | 14000.00 |     30 | 2019-03-01 | a+         | F      |
-|   5 | shoba     | 8586845623 | shoba123@gmail.com     | 1997-10-30 | tester             | 18000.00 |     20 | 2019-12-05 | ab         | F      |
-|   6 | veeksha   | 8142536143 | veeksha123@gmail.com   | 1965-10-30 | developer          | 18000.00 |     10 | 2019-02-05 | b+         | F      |
-|   7 | chandru   | 8521478963 | chandru123@gmail.com   | 1925-10-30 | clerk              | 18000.00 |     10 | 2019-02-05 | b+         | M      |
-|   8 | manjunath | 8412536143 | manjunath123@gmail.com | 1985-10-20 | manager            | 15100.00 |     30 | 2009-02-05 | ab+        | M      |
-|   9 | shivu     | 9552845623 | shivu123@gmail.com     | 1995-10-30 | clerk              | 15000.00 |     40 | 2019-12-05 | ab+        | M      |
-|  10 | santosh   | 9125364713 | santosh123@gmail.com   | 1997-11-30 | analyst            |  2800.00 |     20 | 2009-02-05 | ab-        | M      |
-+-----+-----------+------------+------------------------+------------+--------------------+----------+--------+------------+------------+--------+
 
 
 
 
 16.select * from employee
     -> where designation<> 'tester';
-+-----+-----------+------------+------------------------+------------+--------------------+----------+--------+------------+------------+--------+
-| eid | name      | mobileno   | emailid                | Dob        | designation        | salary   | deptid | doj        | bloodgroup | gender |
-+-----+-----------+------------+------------------------+------------+--------------------+----------+--------+------------+------------+--------+
-|   1 | shwetha   | 8988542635 | shwetha123@gmail.com   | 1997-05-28 | software developer | 15000.00 |     10 | 2019-02-01 | b+         | F      |
-|   3 | sushma    | 8568945231 | sushma123@gmail.com    | 1997-01-11 | software developer | 16000.00 |     10 | 2019-02-21 | b+         | F      |
-|   6 | veeksha   | 8142536143 | veeksha123@gmail.com   | 1965-10-30 | developer          | 18000.00 |     10 | 2019-02-05 | b+         | F      |
-|   7 | chandru   | 8521478963 | chandru123@gmail.com   | 1925-10-30 | clerk              | 18000.00 |     10 | 2019-02-05 | b+         | M      |
-|   8 | manjunath | 8412536143 | manjunath123@gmail.com | 1985-10-20 | manager            | 15100.00 |     30 | 2009-02-05 | ab+        | M      |
-|   9 | shivu     | 9552845623 | shivu123@gmail.com     | 1995-10-30 | clerk              | 15000.00 |     40 | 2019-12-05 | ab+        | M      |
-|  10 | santosh   | 9125364713 | santosh123@gmail.com   | 1997-11-30 | analyst            |  2800.00 |     20 | 2009-02-05 | ab-        | M      |
-+-----+-----------+------------+------------------------+------------+--------------------+----------+--------+------------+------------+--------+
 
 
 17.select salary+5000 from employee;
-+-------------+
-| salary+5000 |
-+-------------+
-|    20000.00 |
-|    23000.00 |
-|    21000.00 |
-|    19000.00 |
-|    23000.00 |
-|    23000.00 |
-|    23000.00 |
-|    20100.00 |
-|    20000.00 |
-|     7800.00 |
-+-------------+
+
 
 
 
 18.select salary*12 from employee;
-+-----------+
-| salary*12 |
-+-----------+
-| 180000.00 |
-| 216000.00 |
-| 192000.00 |
-| 168000.00 |
-| 216000.00 |
-| 216000.00 |
-| 216000.00 |
-| 181200.00 |
-| 180000.00 |
-|  33600.00 |
-+-----------+
 
 19. select * from employee
     -> where designation='software developer'and deptid=10;
-+-----+---------+------------+----------------------+------------+--------------------+----------+--------+------------+------------+--------+
-| eid | name    | mobileno   | emailid              | Dob        | designation        | salary   | deptid | doj        | bloodgroup | gender |
-+-----+---------+------------+----------------------+------------+--------------------+----------+--------+------------+------------+--------+
-|   1 | shwetha | 8988542635 | shwetha123@gmail.com | 1997-05-28 | software developer | 15000.00 |     10 | 2019-02-01 | b+         | F      |
-|   3 | sushma  | 8568945231 | sushma123@gmail.com  | 1997-01-11 | software developer | 16000.00 |     10 | 2019-02-21 | b+         | F      |
-+-----+---------+------------+----------------------+------------+--------------------+----------+--------+------------+------------+--------+
-
 
 20. select * from employee
     -> where designation='tester' and doj>'01-01-2019';
-+-----+---------+------------+----------------------+------------+-------------+----------+--------+------------+------------+--------+
-| eid | name    | mobileno   | emailid              | Dob        | designation | salary   | deptid | doj        | bloodgroup | gender |
-+-----+---------+------------+----------------------+------------+-------------+----------+--------+------------+------------+--------+
-|   2 | girija  | 8586845623 | girija123@gmail.com  | 1995-10-30 | tester      | 18000.00 |     10 | 2019-02-05 | b+         | F      |
-|   4 | akshata | 8988596741 | akshata123@gmail.com | 1997-05-27 | tester      | 14000.00 |     30 | 2019-03-01 | a+         | F      |
-|   5 | shoba   | 8586845623 | shoba123@gmail.com   | 1997-10-30 | tester      | 18000.00 |     20 | 2019-12-05 | ab         | F      |
-+-----+---------+------------+----------------------+------------+-------------+----------+--------+------------+------------+--------+
 
 
 
 21.select * from employee
     -> where deptid=30 and salary>2000;
-+-----+-----------+------------+------------------------+------------+-------------+----------+--------+------------+------------+--------+
-| eid | name      | mobileno   | emailid                | Dob        | designation | salary   | deptid | doj        | bloodgroup | gender |
-+-----+-----------+------------+------------------------+------------+-------------+----------+--------+------------+------------+--------+
-|   4 | akshata   | 8988596741 | akshata123@gmail.com   | 1997-05-27 | tester      | 14000.00 |     30 | 2019-03-01 | a+         | F      |
-|   8 | manjunath | 8412536143 | manjunath123@gmail.com | 1985-10-20 | manager     | 15100.00 |     30 | 2009-02-05 | ab+        | M      |
-+-----+-----------+------------+------------------------+------------+-------------+----------+--------+------------+------------+--------+
 
 22.select name,emailid from employee
     -> where designation='tester' or designation='analyst' or designation='developer';
-+---------+----------------------+
-| name    | emailid              |
-+---------+----------------------+
-| girija  | girija123@gmail.com  |
-| akshata | akshata123@gmail.com |
-| shoba   | shoba123@gmail.com   |
-| veeksha | veeksha123@gmail.com |
-| santosh | santosh123@gmail.com |
-+---------+----------------------+
+
 
 
 
 23.select * from employee
     -> where not designation='analyst';
-+-----+-----------+------------+------------------------+------------+--------------------+----------+--------+------------+------------+--------+
-| eid | name      | mobileno   | emailid                | Dob        | designation        | salary   | deptid | doj        | bloodgroup | gender |
-+-----+-----------+------------+------------------------+------------+--------------------+----------+--------+------------+------------+--------+
-|   1 | shwetha   | 8988542635 | shwetha123@gmail.com   | 1997-05-28 | software developer | 15000.00 |     10 | 2019-02-01 | b+         | F      |
-|   2 | girija    | 8586845623 | girija123@gmail.com    | 1995-10-30 | tester             | 18000.00 |     10 | 2019-02-05 | b+         | F      |
-|   3 | sushma    | 8568945231 | sushma123@gmail.com    | 1997-01-11 | software developer | 16000.00 |     10 | 2019-02-21 | b+         | F      |
-|   4 | akshata   | 8988596741 | akshata123@gmail.com   | 1997-05-27 | tester             | 14000.00 |     30 | 2019-03-01 | a+         | F      |
-|   5 | shoba     | 8586845623 | shoba123@gmail.com     | 1997-10-30 | tester             | 18000.00 |     20 | 2019-12-05 | ab         | F      |
-|   6 | veeksha   | 8142536143 | veeksha123@gmail.com   | 1965-10-30 | developer          | 18000.00 |     10 | 2019-02-05 | b+         | F      |
-|   7 | chandru   | 8521478963 | chandru123@gmail.com   | 1925-10-30 | clerk              | 18000.00 |     10 | 2019-02-05 | b+         | M      |
-|   8 | manjunath | 8412536143 | manjunath123@gmail.com | 1985-10-20 | manager            | 15100.00 |     30 | 2009-02-05 | ab+        | M      |
-|   9 | shivu     | 9552845623 | shivu123@gmail.com     | 1995-10-30 | clerk              | 15000.00 |     40 | 2019-12-05 | ab+        | M      |
-+-----+-----------+------------+------------------------+------------+--------------------+----------+--------+------------+------------+--------+
 
- 
 24.select * from employee
     -> where not(designation='tester' and deptid=30);
-+-----+-----------+------------+------------------------+------------+--------------------+----------+--------+------------+------------+--------+
-| eid | name      | mobileno   | emailid                | Dob        | designation        | salary   | deptid | doj        | bloodgroup | gender |
-+-----+-----------+------------+------------------------+------------+--------------------+----------+--------+------------+------------+--------+
-|   1 | shwetha   | 8988542635 | shwetha123@gmail.com   | 1997-05-28 | software developer | 15000.00 |     10 | 2019-02-01 | b+         | F      |
-|   2 | girija    | 8586845623 | girija123@gmail.com    | 1995-10-30 | tester             | 18000.00 |     10 | 2019-02-05 | b+         | F      |
-|   3 | sushma    | 8568945231 | sushma123@gmail.com    | 1997-01-11 | software developer | 16000.00 |     10 | 2019-02-21 | b+         | F      |
-|   5 | shoba     | 8586845623 | shoba123@gmail.com     | 1997-10-30 | tester             | 18000.00 |     20 | 2019-12-05 | ab         | F      |
-|   6 | veeksha   | 8142536143 | veeksha123@gmail.com   | 1965-10-30 | developer          | 18000.00 |     10 | 2019-02-05 | b+         | F      |
-|   7 | chandru   | 8521478963 | chandru123@gmail.com   | 1925-10-30 | clerk              | 18000.00 |     10 | 2019-02-05 | b+         | M      |
-|   8 | manjunath | 8412536143 | manjunath123@gmail.com | 1985-10-20 | manager            | 15100.00 |     30 | 2009-02-05 | ab+        | M      |
-|   9 | shivu     | 9552845623 | shivu123@gmail.com     | 1995-10-30 | clerk              | 15000.00 |     40 | 2019-12-05 | ab+        | M      |
-|  10 | santosh   | 9125364713 | santosh123@gmail.com   | 1997-11-30 | analyst            |  2800.00 |     20 | 2009-02-05 | ab-        | M      |
-+-----+-----------+------------+------------------------+------------+--------------------+----------+--------+------------+------------+--------+
-
 
 
 
  25.select * from employee
     -> where dob between '1997-01-01'and '1997-10-30';
-+-----+---------+------------+----------------------+------------+--------------------+----------+--------+------------+------------+--------+
-| eid | name    | mobileno   | emailid              | Dob        | designation        | salary   | deptid | doj        | bloodgroup | gender |
-+-----+---------+------------+----------------------+------------+--------------------+----------+--------+------------+------------+--------+
-|   1 | shwetha | 8988542635 | shwetha123@gmail.com | 1997-05-28 | software developer | 15000.00 |     10 | 2019-02-01 | b+         | F      |
-|   3 | sushma  | 8568945231 | sushma123@gmail.com  | 1997-01-11 | software developer | 16000.00 |     10 | 2019-02-21 | b+         | F      |
-|   4 | akshata | 8988596741 | akshata123@gmail.com | 1997-05-27 | tester             | 14000.00 |     30 | 2019-03-01 | a+         | F      |
-|   5 | shoba   | 8586845623 | shoba123@gmail.com   | 1997-10-30 | tester             | 18000.00 |     20 | 2019-12-05 | ab         | F      |
-+-----+---------+------------+----------------------+------------+--------------------+----------+--------+------------+------------+--------+
 
 
 
 26.select * from employee
     -> where salary between 10000 and 20000;
-+-----+-----------+------------+------------------------+------------+--------------------+----------+--------+------------+------------+--------+
-| eid | name      | mobileno   | emailid                | Dob        | designation        | salary   | deptid | doj        | bloodgroup | gender |
-+-----+-----------+------------+------------------------+------------+--------------------+----------+--------+------------+------------+--------+
-|   1 | shwetha   | 8988542635 | shwetha123@gmail.com   | 1997-05-28 | software developer | 15000.00 |     10 | 2019-02-01 | b+         | F      |
-|   2 | girija    | 8586845623 | girija123@gmail.com    | 1995-10-30 | tester             | 18000.00 |     10 | 2019-02-05 | b+         | F      |
-|   3 | sushma    | 8568945231 | sushma123@gmail.com    | 1997-01-11 | software developer | 16000.00 |     10 | 2019-02-21 | b+         | F      |
-|   4 | akshata   | 8988596741 | akshata123@gmail.com   | 1997-05-27 | tester             | 14000.00 |     30 | 2019-03-01 | a+         | F      |
-|   5 | shoba     | 8586845623 | shoba123@gmail.com     | 1997-10-30 | tester             | 18000.00 |     20 | 2019-12-05 | ab         | F      |
-|   6 | veeksha   | 8142536143 | veeksha123@gmail.com   | 1965-10-30 | developer          | 18000.00 |     10 | 2019-02-05 | b+         | F      |
-|   7 | chandru   | 8521478963 | chandru123@gmail.com   | 1925-10-30 | clerk              | 18000.00 |     10 | 2019-02-05 | b+         | M      |
-|   8 | manjunath | 8412536143 | manjunath123@gmail.com | 1985-10-20 | manager            | 15100.00 |     30 | 2009-02-05 | ab+        | M      |
-|   9 | shivu     | 9552845623 | shivu123@gmail.com     | 1995-10-30 | clerk              | 15000.00 |     40 | 2019-12-05 | ab+        | M      |
-+-----+-----------+------------+------------------------+------------+--------------------+----------+--------+------------+------------+--------+
 
 
 
 
 27.select * from employee
     ->  where deptid =20 or deptid=30;
-+-----+-----------+------------+------------------------+------------+-------------+----------+--------+------------+------------+--------+
-| eid | name      | mobileno   | emailid                | Dob        | designation | salary   | deptid | doj        | bloodgroup | gender |
-+-----+-----------+------------+------------------------+------------+-------------+----------+--------+------------+------------+--------+
-|   4 | akshata   | 8988596741 | akshata123@gmail.com   | 1997-05-27 | tester      | 14000.00 |     30 | 2019-03-01 | a+         | F      |
-|   5 | shoba     | 8586845623 | shoba123@gmail.com     | 1997-10-30 | tester      | 18000.00 |     20 | 2019-12-05 | ab         | F      |
-|   8 | manjunath | 8412536143 | manjunath123@gmail.com | 1985-10-20 | manager     | 15100.00 |     30 | 2009-02-05 | ab+        | M      |
-|  10 | santosh   | 9125364713 | santosh123@gmail.com   | 1997-11-30 | analyst     |  2800.00 |     20 | 2009-02-05 | ab-        | M      |
-+-----+-----------+------------+------------------------+------------+-------------+----------+--------+------------+------------+--------+
 
 
 28.select * from employee
@@ -459,34 +176,10 @@ mysql> select * from employee;
 
 29. select name from employee
     -> where designation='developer';
-+---------+
-| name    |
-+---------+
-| veeksha |
-+---------+
 
 
 30. insert into employee(eid,name,mobileno,salary)
     -> values(11,'shivani',897564123,20000);
-Query OK, 1 row affected (0.11 sec)
-
-mysql> select * from employee;
-+-----+-----------+------------+------------------------+------------+--------------------+----------+--------+------------+------------+--------+
-| eid | name      | mobileno   | emailid                | Dob        | designation        | salary   | deptid | doj        | bloodgroup | gender |
-+-----+-----------+------------+------------------------+------------+--------------------+----------+--------+------------+------------+--------+
-|   1 | shwetha   | 8988542635 | shwetha123@gmail.com   | 1997-05-28 | software developer | 15000.00 |     10 | 2019-02-01 | b+         | F      |
-|   2 | girija    | 8586845623 | girija123@gmail.com    | 1995-10-30 | tester             | 18000.00 |     10 | 2019-02-05 | b+         | F      |
-|   3 | sushma    | 8568945231 | sushma123@gmail.com    | 1997-01-11 | software developer | 16000.00 |     10 | 2019-02-21 | b+         | F      |
-|   4 | akshata   | 8988596741 | akshata123@gmail.com   | 1997-05-27 | tester             | 14000.00 |     30 | 2019-03-01 | a+         | F      |
-|   5 | shoba     | 8586845623 | shoba123@gmail.com     | 1997-10-30 | tester             | 18000.00 |     20 | 2019-12-05 | ab         | F      |
-|   6 | veeksha   | 8142536143 | veeksha123@gmail.com   | 1965-10-30 | developer          | 18000.00 |     10 | 2019-02-05 | b+         | F      |
-|   7 | chandru   | 8521478963 | chandru123@gmail.com   | 1925-10-30 | clerk              | 18000.00 |     10 | 2019-02-05 | b+         | M      |
-|   8 | manjunath | 8412536143 | manjunath123@gmail.com | 1985-10-20 | manager            | 15100.00 |     30 | 2009-02-05 | ab+        | M      |
-|   9 | shivu     | 9552845623 | shivu123@gmail.com     | 1995-10-30 | clerk              | 15000.00 |     40 | 2019-12-05 | ab+        | M      |
-|  10 | santosh   | 9125364713 | santosh123@gmail.com   | 1997-11-30 | analyst            |  2800.00 |     20 | 2009-02-05 | ab-        | M      |
-|  11 | shivani   | 897564123  | NULL                   | NULL       | NULL               | 20000.00 |   NULL | NULL       | NULL       | NULL   |
-+-----+-----------+------------+------------------------+------------+--------------------+----------+--------+------------+------------+--------+
-
 
 
 26.select * from employee
