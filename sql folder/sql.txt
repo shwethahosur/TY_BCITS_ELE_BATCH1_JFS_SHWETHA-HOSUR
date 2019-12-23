@@ -165,13 +165,6 @@ mysql> select * from employee;
 
 28.select * from employee
     -> where dob<'1995-01-01';
-+-----+-----------+------------+------------------------+------------+-------------+----------+--------+------------+------------+--------+
-| eid | name      | mobileno   | emailid                | Dob        | designation | salary   | deptid | doj        | bloodgroup | gender |
-+-----+-----------+------------+------------------------+------------+-------------+----------+--------+------------+------------+--------+
-|   6 | veeksha   | 8142536143 | veeksha123@gmail.com   | 1965-10-30 | developer   | 18000.00 |     10 | 2019-02-05 | b+         | F      |
-|   7 | chandru   | 8521478963 | chandru123@gmail.com   | 1925-10-30 | clerk       | 18000.00 |     10 | 2019-02-05 | b+         | M      |
-|   8 | manjunath | 8412536143 | manjunath123@gmail.com | 1985-10-20 | manager     | 15100.00 |     30 | 2009-02-05 | ab+        | M      |
-+-----+-----------+------------+------------------------+------------+-------------+----------+--------+------------+------------+--------+
 
 
 29. select name from employee
@@ -297,4 +290,66 @@ mysql> select * from employee;
 57.insert into employee
     -> values(13,'shreya',7896451236,'shreya123@gmail.com','1996-12-31','developer',25000,40,'2019-01-12','o+','F',23);  
 
-58. rollback;                                                      
+58. rollback;     
+
+
+59.update employee
+    ->  set emailid='shreya123@gmail.com',Dob='1997-05-21'
+    -> where eid=13;
+
+60. rollback;
+
+
+61.truncate table customer;
+
+
+62.drop table customer;
+
+63.savepoint test;
+
+64.update employee
+    ->  set emailid='divya123@gmail.com',Dob='1587-05-21'
+    -> where eid=13;
+
+65. rollback test;
+
+
+66.savepoint test1;
+
+67. delete from employee
+    -> where eid =13;
+
+68.rollback to test1;  
+
+joins:-
+
+cross join.
+69.select * from employee,department; 
+
+
+inner join
+70.select * from department,employee
+where employee.deptid=department.deptid
+
+71.select d.deptid, e.deptid ,d.dname, e.name from department d,employee e
+where d.deptid= e.deptid
+
+outer join:
+i)left outer join
+80.select *  from deselect *  from department right outer join  employee
+on department.deptid=employee.deptid
+partment natural join  employee
+
+81.select *  from department left outer join  employee
+on department.deptid=employee.deptid
+
+
+82.select *  from department right outer join  employee
+on department.deptid=employee.deptid
+UNION all
+select *  from department right outer join  employee
+on department.deptid=employee.deptid
+
+
+
+                                               
