@@ -17,7 +17,7 @@ public static void main(String[] args) {
 	for (Map.Entry<Integer, String> entry : s1) {
 		System.out.println(entry.getKey());
 		System.out.println(entry.getValue());
-	
+		
 }
 }
 }
