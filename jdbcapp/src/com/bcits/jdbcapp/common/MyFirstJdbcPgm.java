@@ -16,16 +16,29 @@ ResultSet rs=null;
 Statement stmt=null;
 		try {
 			//load the driver
-			Driver driverref = new Driver();
-			DriverManager.registerDriver(driverref);
-           
+			/*Driver driverref = new Driver();
+			DriverManager.registerDriver(driverref);*/
+           try {
+			Class.forName("com.mysql.jdbc.Driver").newInstance();
+		} catch (InstantiationException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IllegalAccessException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			
+		} 
 			String dbUrl = "jdbc:mysql://localhost:3306/employee_management?user=root&password=ROOT";
-			 con = DriverManager.getConnection(dbUrl);
+			 //con = DriverManager.getConnection(dbUrl);
+			con = DriverManager.getConnection(dbUrl, "root","ROOT");
 
 			String query = " select * from employee_primary_info";
 			 stmt = con.createStatement();
 			 rs = stmt.executeQuery(query);
-
+ 
 			while (rs.next()) {
 				int empid = rs.getInt("empid");
 				String ename = rs.getString("name");
@@ -38,6 +51,7 @@ Statement stmt=null;
 				String blood_group = rs.getString("blood_group");
 				int deptid = rs.getInt("deptid");
 				int manager_id = rs.getInt("manager_id");
+				double salary=rs.getDouble("salary");
 
 				System.out.println("employee id===>" + empid);
 				System.out.println("employee name===>" + ename);
