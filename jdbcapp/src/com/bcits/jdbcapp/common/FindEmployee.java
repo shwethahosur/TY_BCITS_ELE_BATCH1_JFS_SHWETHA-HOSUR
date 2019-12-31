@@ -10,6 +10,7 @@ import java.sql.Statement;
 import com.mysql.jdbc.Driver;
 
 public class FindEmployee {
+	
 public static void main(String[] args) {
 	Connection con =null;
 	Statement stmt=null;
@@ -17,6 +18,7 @@ public static void main(String[] args) {
 	try {
 		Driver driverref=new Driver();
 		DriverManager.registerDriver(driverref);
+		
 		
 		String dbUrl = "jdbc:mysql://localhost:3306/employee_management?user=root&password=ROOT";
 		 con = DriverManager.getConnection(dbUrl);
