@@ -1,0 +1,20 @@
+form{
+    
+   border:1px solid;
+    margin-left: 325px;
+    margin-right: 425px;
+    padding-bottom: 50px;
+    padding-top: 25px;
+    text-align: center;
+    background-color: orange;
+    color: white;
+
+}
+input[type="submit"]{
+    background-color: palevioletred;
+    color: white;
+    border:none;
+}
+input[type="email"]{
+    border:none;
+}
