@@ -1,0 +1,19 @@
+form{
+    border: 1px solid rgb(16, 16, 20);
+    margin-right: 600px;
+    padding-left: 125px;
+    padding-top: 55px;
+    margin-left: 100px;
+    padding-bottom:125px ;
+    background-color:rgba(2, 10, 22, 0.911)
+}  
+input[type="email"],input[type="password"]{
+    width: 500px;
+    height: 25px;
+}
+
+input[type="submit"][value="Sign Up"],  input[type="text"][value="get satrted"]{
+border:none;
+color:white;
+background-color: rgb(12, 163, 143); 
+}

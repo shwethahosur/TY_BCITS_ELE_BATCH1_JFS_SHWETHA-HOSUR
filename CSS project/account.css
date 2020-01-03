@@ -1,0 +1,22 @@
+form{
+    border: 1px solid rgb(16, 16, 20);
+    margin-right: 700px;
+    padding-left: 125px;
+    padding-top: 55px;
+    margin-left: 100px;
+    padding-bottom:125px ;
+    background-color:rgba(2, 10, 22, 0.911)
+}
+h2,label,input[type="submit"],input[type="file"],::placeholder{
+    color: white;
+}
+
+input[type="text"],input[type="password"],input[type="email"],input[type="submit"]{
+    width: 500px;
+    height: 25px;
+    background-color: black;
+}
+input[type="submit"]{
+    background-color: skyblue;
+    border: none;
+}

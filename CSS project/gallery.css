@@ -1,0 +1,15 @@
+img{
+    width: 301px;
+    height: 272px;
+    border:solid yellowgreen;
+    padding: 10px;
+    transition: all 2s;
+
+}
+img:hover{
+     /* transform: scale(1.2,1.2);  */
+    /* transform:rotate(360deg); */
+    /* transform: skew(180deg); */
+    transform: translate(50px,50px);
+    
+}
