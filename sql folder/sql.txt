@@ -350,6 +350,10 @@ UNION all
 select *  from department right outer join  employee
 on department.deptid=employee.deptid
 
+83.insert into employee_address_info
+    -> values(4,'current_add',89,'2nd cross','micro layout','hebbal','bangalore',550025);
 
+84.insert into employee_address_info
+    -> values(4,'permanent_add',63,'1st cross','mahalakshmi layout','rajajinagar','bangalore',560025);
 
                                                
