@@ -1,0 +1,38 @@
+form{
+    text-align: center;
+    margin-right: 50px;
+    margin-left: 50px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding-left: 10px;
+    padding-top: 20px;
+    padding: 10px;
+    background-color: skyblue;
+}
+h3{
+    font-size: 35px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: forestgreen;
+}
+body{
+    background-color: skyblue;
+}
+pre{
+    font-size: 35px;
+    color: tomato;
+    font-family: 'Times New Roman', Times, serif;
+}
+input[type="submit"]{
+    background-color:rgb(211, 188, 166);
+    width: 120px;
+    height: 35px;
+    border: none;
+    margin-right: 30px;
+    text-align: center;
+
+}
+input[type="text"],input[type="password"]{
+    height: 31px;
+    background-color: rgb(255, 255, 255);
+    border: none;
+}

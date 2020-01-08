@@ -1,36 +1,33 @@
 package com.bcits.jdbcapp.common;
 
-import java.io.FileInputStream;
 import java.sql.Connection;
 import java.sql.Date;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
-import java.util.Properties;
 
-import com.mysql.jdbc.Driver;
-
-public class MyFirstJdbcPgm {
+public class PrepaedStatementExample {
 	public static void main(String[] args) {
 		Connection con = null;
-		Statement stmt = null;
+		PreparedStatement pstmt = null;
 		ResultSet rs = null;
+
+//1.load the driver
 		try {
-			// Driver driverref=new Driver();
-			// DriverManager.registerDriver(driverref);
-
 			Class.forName("com.mysql.jdbc.Driver").newInstance();
+			// 2.get db connection via driver
 
-			String dbUrl = "jdbc:mysql://localhost:3306/employee_management?user=root&password=ROOT";
-			con = DriverManager.getConnection(dbUrl);
+			String dburl = "jdbc:mysql://localhost:3306/employee_management";
+			con = DriverManager.getConnection(dburl, "root", "ROOT");
+			//3.issue the sql queries
+			String query = " select * from employee_primary_info " 
+			+ " where empid=? ";
+			pstmt = con.prepareStatement(query);
+			pstmt.setInt(1, Integer.parseInt(args[0]));
+			rs = pstmt.executeQuery();
 
-			String query = "select * from employee_primary_info";
-
-			stmt = con.createStatement();
-			rs = stmt.executeQuery(query);
-
-			while (rs.next()) {
+			if (rs.next()) {
 				int empid = rs.getInt("empid");
 				String name = rs.getString("name");
 				long phno = rs.getLong("phno");
@@ -53,29 +50,33 @@ public class MyFirstJdbcPgm {
 				System.out.println("employee deptid===>" + deptid);
 				System.out.println("employee manager_id===>" + manager_id);
 
+			} else {
+				System.err.println("employee data not found in db!!!");
 			}
 
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
+
 			e.printStackTrace();
 		} finally {
-////			try {
-//				if (con != null) {
-//					con.close();
-//
-//				}
-//				if (rs != null) {
-//					rs.close();
-//
-//				}
-//				if (stmt != null) {
-//					stmt.close();
-//				}
-//			} catch (SQLException e) {
-//				// TODO Auto-generated catch block
-//				e.printStackTrace();
-//			}
+			//5.close all the jdbc objects
+			try {
+				if (con != null) {
+					con.close();
 
-		}
-	}// end of main
-}// end of class
+				}
+				if (rs != null) {
+					rs.close();
+
+				}
+				if (pstmt != null) {
+					pstmt.close();
+				}
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}//end of inner try catch block
+
+		}//end of finally
+
+	}//end of main
+
+}//end of class

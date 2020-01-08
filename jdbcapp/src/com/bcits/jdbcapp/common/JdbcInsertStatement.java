@@ -12,12 +12,11 @@ import java.util.Properties;
 public class JdbcInsertStatement {
 	public static void main(String[] args) {
 		Connection con = null;
-        int rs;
+		int rs;
 		Statement stmt = null;
 
 		try {
 
-			
 			FileInputStream inputstream = new FileInputStream("dbinfo.properties");
 			Properties properties = new Properties();
 			properties.load(inputstream);
@@ -26,10 +25,9 @@ public class JdbcInsertStatement {
 			con = DriverManager.getConnection(properties.getProperty("dbUrl"), properties);
 
 			String query = "insert into employee_primary_info values(16,'suma',9652142512,'divya@gmail.com','1997-05-29','2019-02-02','developer','b+',25000,30,25)";
-            String query1="select * from employee_primary_info";
+
 			stmt = con.createStatement();
 			rs = stmt.executeUpdate(query);
-			
 
 			if (rs != 0) {
 				System.out.println("inserted successfully");

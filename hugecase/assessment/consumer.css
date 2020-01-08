@@ -1,0 +1,31 @@
+pre{
+    font-size: 20px;
+    color: darkviolet;
+   
+}
+
+h4{
+    margin-right: 20px;
+  
+}
+form{
+    
+    margin-right: 900px;
+    padding-left: 125px;
+    padding-top: 100px;
+    margin-left: 400px;
+    padding-bottom:125px ;
+   
+}
+input[type="submit"]{
+    background-color: skyblue;
+    width: 80px;
+    height: 25px;
+    border: none;
+    margin-right: 30px;
+    text-align: center;
+
+}
+body{
+    background-color: skyblue;
+}
