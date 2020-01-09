@@ -24,7 +24,7 @@ public class JdbcInsertStatement {
 
 			con = DriverManager.getConnection(properties.getProperty("dbUrl"), properties);
 
-			String query = "insert into employee_primary_info values(16,'suma',9652142512,'divya@gmail.com','1997-05-29','2019-02-02','developer','b+',25000,30,25)";
+			String query = "insert into employee_primary_info values(27,'suma',9652142512,'divya@gmail.com','1997-05-29','2019-02-02','developer','b+',25000,30,25)";
 
 			stmt = con.createStatement();
 			rs = stmt.executeUpdate(query);
