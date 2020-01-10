@@ -17,8 +17,8 @@ form{
     margin-left: 400px;
     padding-bottom:125px ;
     */
-
-
+    margin-bottom: 20px;
+    margin-top: 20px;
     border:1px solid;
     margin-left: 325px;
     margin-right: 425px;
@@ -27,17 +27,20 @@ form{
     text-align: center;
     background-color: rgb(221, 184, 115);
     color: white;
+/* background-image: url(/bg\ image.jpg); */
+
 }
 input[type="submit"]{
     background-color: skyblue;
-    width: 80px;
-    height: 25px;
+    width: 123px;
+    height: 41px; 
     border: none;
     margin-right: 30px;
     text-align: center;
-
+font-size: 23px;
+font-family: 'Times New Roman', Times, serif;
 }
-body{
-    
+input{
+
     
 }
