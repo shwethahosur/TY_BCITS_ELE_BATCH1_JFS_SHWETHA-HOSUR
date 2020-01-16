@@ -9,4 +9,29 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  
+  <context-param>
+  <param-name>appName</param-name>
+  <param-value> empWebapp</param-value>
+  </context-param>
+  
+  
+  <servlet>
+  <servlet-name>CurrentDate</servlet-name>
+  <servlet-class>com.bcits.employeewebappservlet.DateServlet</servlet-class>
+  <init-param>
+  <param-name>servletName</param-name>
+  <param-value>DateServlet</param-value>
+  
+  </init-param>
+  
+  </servlet>
+ <servlet-mapping> 
+<servlet-name>CurrentDate</servlet-name>
+<url-pattern>/CurrentDate</url-pattern>
+ </servlet-mapping> 
+ 
+  
+  
+  
 </web-app>
