@@ -14,6 +14,15 @@ import javax.servlet.http.HttpServletResponse;
 import org.omg.IOP.ServiceContext;
 
 public class DateServlet extends HttpServlet {
+	public DateServlet() {
+		System.out.println("constructor");
+	}
+	
+	@Override
+	public void init() throws ServletException {
+		System.out.println(" init method");
+	}
+	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		// java code to generate current system date and time(dynamic)
@@ -36,8 +45,13 @@ public class DateServlet extends HttpServlet {
 		out.println("<h1>Current System Date & Time is:- "+date+"</h1>");
 		out.println("<h2>Servlet name is:- "+myConfigparamval+"</h2>");
 		out.println("<h2>Servlet name is:- "+mycontextparamval+"</h2>");
-		out.println("</body>");
-		out.println("</html>");
+		out.println("</body>");    
+		out.println("</html>");  
 
 	}//End of doGet()
+	
+	@Override
+	public void destroy() {
+		System.out.println("destroyed");
+	}
 }

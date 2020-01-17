@@ -12,6 +12,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.bcits.bean.Test1;
 
@@ -19,23 +20,30 @@ import com.bcits.bean.Test1;
 public class DeleteEmployeeServlet extends HttpServlet  {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+	
+		
+		HttpSession session=req.getSession(false);	
+		//Generate Dynamic Response
+		resp.setContentType("text/html");
+		PrintWriter out= resp.getWriter();
+		
+		
+		EntityManagerFactory emf= Persistence.createEntityManagerFactory("test1");
+		EntityManager manager = emf.createEntityManager();
+		if(session!=null) {
+		
 		
 		//Get the form data
 		String empIdVal = req.getParameter("empid");
 		int empid = Integer.parseInt(empIdVal);
 		
-		EntityManagerFactory emf= Persistence.createEntityManagerFactory("test1");
-		EntityManager manager = emf.createEntityManager();
+		
 		EntityTransaction transaction=manager.getTransaction();
 		transaction.begin();
 		
 		Test1 test1=manager.find(Test1.class, empid);
 		manager.remove(test1);
 		transaction.commit();
-		
-		//Generate Dynamic Response
-		resp.setContentType("text/html");
-		PrintWriter out = resp.getWriter();
 		
 		
 			//display empId not found
@@ -44,9 +52,12 @@ public class DeleteEmployeeServlet extends HttpServlet  {
 			out.println("<h1 style='color:red'>Employee ID "+ empid +" Found <h1>");
 			out.println("</body>");
 			out.println("</html>");
-			
+	}
 		
 		manager.close();
 		emf.close();
+		
+		
+		req.getRequestDispatcher("./LoginForm.html").include(req, resp);
 	}// End of doGet
 }
