@@ -12,6 +12,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.bcits.bean.Test1;
 
@@ -19,6 +20,15 @@ import com.bcits.bean.Test1;
 public class UpdateEmployeeServlet extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		HttpSession session=req.getSession(false);	
+		resp.setContentType("text/html");
+		PrintWriter out= resp.getWriter();
+		if(session!=null) {
+			//valid session
+			//get the form data
+		
+		
+		
 		String empIdVal = req.getParameter("empid");
 		int empid = Integer.parseInt(empIdVal);
 		String empname=req.getParameter("empname");
@@ -32,7 +42,7 @@ public class UpdateEmployeeServlet extends HttpServlet {
 
 		resp.setContentType("text/html");
 
-		PrintWriter out = resp.getWriter();
+		
 
 		if (test1== null) {
 			out.println("<html>");
@@ -56,5 +66,15 @@ public class UpdateEmployeeServlet extends HttpServlet {
 		manager.close();
 		entityManagerFactory.close();
 
+	}else {
+		out.println("<html>");
+		out.println("<body>");
+		
+		out.println("<h1 style='color:red'>please login first</h1>");
+		out.println("</body>");
+		out.println("</html>");
+		
+		req.getRequestDispatcher("./LoginForm.html").include(req, resp);
 	}
+}
 }

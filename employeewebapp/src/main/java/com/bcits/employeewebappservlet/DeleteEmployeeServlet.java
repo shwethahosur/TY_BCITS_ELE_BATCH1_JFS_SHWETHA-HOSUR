@@ -23,14 +23,15 @@ public class DeleteEmployeeServlet extends HttpServlet  {
 	
 		
 		HttpSession session=req.getSession(false);	
-		//Generate Dynamic Response
 		resp.setContentType("text/html");
 		PrintWriter out= resp.getWriter();
-		
-		
+		if(session!=null) {
+			//valid session
+			//get the form data
+			session.invalidate();
 		EntityManagerFactory emf= Persistence.createEntityManagerFactory("test1");
 		EntityManager manager = emf.createEntityManager();
-		if(session!=null) {
+		
 		
 		
 		//Get the form data
@@ -52,12 +53,23 @@ public class DeleteEmployeeServlet extends HttpServlet  {
 			out.println("<h1 style='color:red'>Employee ID "+ empid +" Found <h1>");
 			out.println("</body>");
 			out.println("</html>");
-	}
+	
 		
 		manager.close();
 		emf.close();
+	}else {
+			out.println("<html>");
+			out.println("<body>");
+			
+			out.println("<h1 style='color:red'>please login first</h1>");
+			out.println("</body>");
+			out.println("</html>");
+			
+			req.getRequestDispatcher("./LoginForm.html").include(req, resp);
+				
+		}
 		
 		
-		req.getRequestDispatcher("./LoginForm.html").include(req, resp);
+		
 	}// End of doGet
 }
