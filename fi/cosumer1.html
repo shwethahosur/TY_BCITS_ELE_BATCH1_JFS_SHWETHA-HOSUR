@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="cosumer1.css">
+     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css" rel="stylesheet"/>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="cosumer.js"></script>
+</head>
+<body>
+    <div class="container-fluid">
+         
+          <nav class="navbar ">
+            <!-- <div class="container-fluid"> -->
+              <div class="navbar-header">
+                <a class="navbar-brand" href="#">DISCOM</a>
+              </div>
+              <!-- <ul class="nav navbar-nav"> -->
+                <!-- <li class="active"><a href="#">Home</a></li> -->
+                <!-- <li><a href="#">Page 1</a></li> -->
+                <!-- <li><a href="#">Page 2</a></li> -->
+              </ul>
+              <ul class="nav navbar-nav navbar-right">
+                <!-- <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li> -->
+                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+              </ul>
+            <!-- </div> -->
+          </nav>
+
+
+<form action="">
+          <!-- <form onsubmit="return myfun()">  -->
+          <div class="row">
+            <div class="col-25">
+                <label for="meter">Meter Number</label>
+              </div>
+              <div class="col-75">
+                <input type="text" id="Meter" name="firstname" placeholder="Your meter number..">
+              </div>
+            </div>
+            <div class="row">
+            <div class="col-25">
+              <label for="fname">First Name</label>
+            </div>
+            <div class="col-75">
+              <input type="text" id="fname" name="firstname" placeholder="Your name..">
+              <span id="message"> </span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="lname">Last Name</label>
+            </div>
+            <div class="col-75">
+              <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+              <span id="message"> </span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="password">Password</label>
+            </div>
+            <div class="col-75">
+              <input type="password" name="pwd" id="pwd" placeholder="your password">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="Email-id">Email-id</label>
+            </div>
+            <div class="col-75">
+              <input type="email" name="email" id="email">
+              <span id="message"> </span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="Mobile">Mobile Number</label>
+            </div>
+            <div class="col-75">
+             <input type="tel" name="mobile" id="mobile" required>
+             <span id="message"> </span>
+            </div>
+          </div>
+
+
+          <div class="row">
+            <div class="col-25">
+             
+              
+              <label for="region">Region</label>
+              
+            </div>
+            <div class="col-75">
+              <select name="region" id="region">
+                <option value="0" selected disabled>select</option>
+                <option value="1">North</option>
+                <option value="2">South</option>
+
+                   </select>
+            </div>
+          </div>
+
+
+          <div class="row">
+            <div class="col-25">
+             
+              
+              <label for="region">Type of Consumer</label>
+             
+            </div>
+            <div class="col-75">
+              <select name="consumer" id="consumer">
+                <option value="0" selected disabled>select</option>
+                <option value="1"> Residential consumers</option>
+                <option value="2">Commercial consumers</option>
+                <option value="3">Industrial consumers</option>
+
+                   </select>
+            </div>
+          </div>
+
+
+
+
+
+
+          <!-- <div class="row">
+            <div class="col-25">
+              <label for="country">Country</label>
+            </div>
+            <div class="col-75">
+              <select id="country" name="country">
+                <option value="australia">Australia</option>
+                <option value="canada">Canada</option>
+                <option value="usa">USA</option>
+              </select>
+            </div>
+          </div> -->
+          <div class="row">
+            <div class="col-25">
+              <label for="subject">Address</label>
+            </div>
+            <div class="col-75">
+              <textarea id="subject" name="subject"  style="height:100px"></textarea>
+            </div>
+          </div>
+          <div class="row">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+             <input type="submit" value="SignUp" id="signup" onclick=" signup()"> &nbsp; &nbsp;&nbsp;&nbsp;
+            <input type="reset" value="clear">
+            <p style="text-align: center;"> <span>Already Register?then please Login</span> </p>
+            <!-- <Span id="signup" onclick="return signup()"></Span> -->
+          </div>
+        </form>
+      </div>
+</body>
+</html>
