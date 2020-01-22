@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    
+    <bean id="message" class=" com.bcits.springcore.beans.MessageBean" >
+  
+    <property name="message" value="welcome to spring!!!........."/>
+    </bean>
+    
+    
+     <!-- <bean id="message" class=" com.bcits.springcore.beans.MessageBean" init-method="init" destroy-method="destroy">
+  
+    <property name="message" value="welcome to spring!!!........."/>
+    </bean> -->
+  <!--  <bean id="employee" class="com.bcits.springcore.beans.EmployeeBean">
+   <property name="Name" value="sunil"/>
+      <property name="age" value="23"/>
+    </bean>
+     <bean id="employee2" class="com.bcits.springcore.beans.EmployeeBean">
+   <property name="Name" value="charan"/>
+      <property name="age" value="45"/>
+    </bean> -->
+     <bean id="employee" class="com.bcits.springcore.beans.EmployeeBean" scope="prototype"/>
+
+</beans>
