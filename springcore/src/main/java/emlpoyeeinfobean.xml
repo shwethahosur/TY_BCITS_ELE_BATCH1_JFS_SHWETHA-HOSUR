@@ -6,15 +6,90 @@
         http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!-- bean definitions here -->
-    <bean id="employee" class ="com.bcits.springcore.beans.EmployeeBean">
+    
+    
+    <bean id="employee" class ="com.bcits.springcore.beans.EmployeeBean" autowire="byType">
+    <property name="name" value="sud"/>
+    <property name="age" value="55"/> 
+  
+    </bean>
+    
+    
+     </beans>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <!-- <bean id="employee" class ="com.bcits.springcore.beans.EmployeeBean">
+    <property name="name" value="sud"/>
+    <property name="age" value="55"/> 
+    <property name="departmentBean" ref="department"/>
+    </bean> -->
+    
+    
+    
+   <!--  <bean id="employee" class ="com.bcits.springcore.beans.EmployeeBean" autowire="byName">
+    <property name="name" value="sud"/>
+    <property name="age" value="55"/> 
+    <property name="departmentBean" ref="department"/> for type by name
+    </bean> -->
+    
+   <!--  <bean id="employee" class ="com.bcits.springcore.beans.EmployeeBean" autowire="byName">
     <property name="name" value="sud"/>
     <property name="age" value="55"/> 
     <property name="departmentBean" ref="department"/>
     </bean>
+     -->
+   <!--  <bean  id="employee" class ="com.bcits.springcore.beans.EmployeeBean">
+    <constructor-arg name="age" value="65"/>
+    <constructor-arg name="name" value="prashul"/>
+    <constructor-arg name="departmentBean" ref="department"/>
+    </bean> -->
     
-    <bean id="department" class="com.bcits.springcore.beans.DepartmentBean">
+    <!-- <bean  id="employee" class ="com.bcits.springcore.beans.EmployeeBean" autowire="constructor" >
+    <constructor-arg name="age" value="65"/>
+    <constructor-arg name="name" value="prashul"/>
+
+    </bean -->>  <!--  type of constructor to avoid above lines -->
+    
+    
+   <!--  
+    <bean id="departmentBean" class="com.bcits.springcore.beans.DepartmentBean">
     <property name="deptid" value="11"/>
     <property name="deptname" value="dev"></property>
+    </bean> -->
     
-    </bean>
-    </beans>
+    
+   
+ <!--  <bean id="dev" class="com.bcits.springcore.beans.DepartmentBean" primary="true">
+  <property name="deptid" value="11"/>
+  <property name="deptname" value="hr"/>  
+  </bean>
+    
+    <bean id="hr" class="com.bcits.springcore.beans.DepartmentBean" primary="true">
+  <property name="deptid" value="11"/>
+  <property name="deptname" value="hr"/>  
+  </bean> -->
+  
+  
+ 
+   <!-- <bean id="hr" class="com.bcits.springcore.beans.DepartmentBean" autowire-candidate="false">
+  <property name="deptid" value="11"/>
+  <property name="deptname" value="hr"/>  
+  </bean> -->
+    
+   

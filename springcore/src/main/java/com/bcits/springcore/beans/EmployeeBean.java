@@ -1,10 +1,11 @@
 package com.bcits.springcore.beans;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
-
+//@AllArgsConstructor
 @Data
 public class EmployeeBean {
-private String Name ;
+private String name ;
 private int age;
 private DepartmentBean departmentBean;
 	/*
