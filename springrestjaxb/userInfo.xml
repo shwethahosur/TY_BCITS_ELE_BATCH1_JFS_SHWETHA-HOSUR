@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<User_info name="shwetha">
+    <user_id>999</user_id>
+    <mobileno>9799999999</mobileno>
+    <dateOfBirth>2020-01-28T13:11:16.470+05:30</dateOfBirth>
+    <dateOfJoining>2020-01-28T13:11:16.470+05:30</dateOfJoining>
+    <designation>ssd</designation>
+    <salary>50000.0</salary>
+    <department_id>225</department_id>
+    <password>shwetha</password>
+    <user-other-info>
+        <gender>female</gender>
+        <aadhar>67646776</aadhar>
+    </user-other-info>
+</User_info>

@@ -1,0 +1,31 @@
+{
+	"name": "shwetha",
+	"mobileno": 9799999999,
+	"officialMail": null,
+	"dateOfBirth": 1580209770757,
+	"dateOfJoining": 1580209770757,
+	"designation": "ssd",
+	"bloodGroup": null,
+	"salary": 50000.0,
+	"deptId": 225,
+	"managerId": null,
+	"userOtherInfoBean": {
+		"gender": "female",
+		"aadharnumber": 67646776
+	},
+	"useraddresseslist": [
+		{
+			"street": null,
+			"city": "hubli",
+			"addressType": "\u0000",
+			"houseNumber": 1
+		},
+		{
+			"street": null,
+			"city": "hyd",
+			"addressType": "p",
+			"houseNumber": 0
+		}
+	],
+	"employeeId": 999
+}

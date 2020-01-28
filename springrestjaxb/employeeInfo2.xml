@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Employee_info empId="123" name="suma">
+    <dateOfBirth>2020-01-28T12:11:20.186+05:30</dateOfBirth>
+    <dateOfJoining>2020-01-28T12:11:20.186+05:30</dateOfJoining>
+    <designation>ssd</designation>
+    <salary>50000.0</salary>
+    <department_id>225</department_id>
+    <password>shwetha</password>
+</Employee_info>

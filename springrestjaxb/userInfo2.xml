@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<User_info name="shwetha">
+    <empId>999</empId>
+    <mobileno>9799999999</mobileno>
+    <dateOfBirth>2020-01-28T16:39:30.757+05:30</dateOfBirth>
+    <dateOfJoining>2020-01-28T16:39:30.757+05:30</dateOfJoining>
+    <designation>ssd</designation>
+    <salary>50000.0</salary>
+    <department_id>225</department_id>
+    <password>shwetha</password>
+    <user-other-info>
+        <gender>female</gender>
+        <aadhar>67646776</aadhar>
+    </user-other-info>
+    <user-addresses-list>
+        <useraddresseslist>
+            <house-number>1</house-number>
+            <city>hubli</city>
+            <address-type>0</address-type>
+        </useraddresseslist>
+        <useraddresseslist>
+            <house-number>0</house-number>
+            <city>hyd</city>
+            <address-type>112</address-type>
+        </useraddresseslist>
+    </user-addresses-list>
+</User_info>
