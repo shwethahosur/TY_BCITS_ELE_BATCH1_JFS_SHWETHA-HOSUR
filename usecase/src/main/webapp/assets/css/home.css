@@ -1,0 +1,135 @@
+body {
+	font-family: 'Roboto', sans-serif;
+	background-image: url('../images/pic7.jpg');
+	text-align: center;
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+
+p {
+	text-align: center;
+}
+
+.col-75 {
+	align: left;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+}
+
+.sidebar {
+	position: fixed;
+	left: 0;
+	width: 250px;
+	height: 100%;
+	background-color: rgb(205, 133, 63);
+}
+
+.sidebar-header {
+	font-size: 22px;
+	color: white;
+	text-align: center;
+	line-height: 70px;
+	background-color: violet;
+	user-select: none;
+}
+
+.sidebar ul a {
+	display: block;
+	height: 100%;
+	width: 100%;
+	line-height: 65px;
+	font-size: 20px;
+	color: white;
+	padding-left: 40px;
+	box-sizing: border-box;
+	border-top: 1px solid blue;
+	border-bottom: 1px solid black;
+	transition: .4s;
+}
+
+ul li:hover a {
+	padding-left: 50px;
+}
+
+.sidebar ul a i {
+	margin-right: 16px;
+}
+
+.sidebar a i {
+	margin-left: -10px;
+}
+
+a:hover {
+	width: 200px;
+	background: inherit;
+}
+
+.h1 {
+	font-family: sans-serif;
+	margin-left: 150px;
+	margin-right: 200px;
+	margin-top: 200px;
+	margin-bottom: 200px;
+	padding-left: 150px;
+}
+
+.col-75 {
+	border-radius: 50px;
+	margin-right: 500px;
+}
+
+.col-50 {
+	border-radius: 50px;
+	margin-left: 500px;
+	margin-bottom: 2000px;
+}
+
+.col-25 {
+	margin-right: 500px;
+	padding-bottom: 10px;
+}
+
+.col-35 {
+	margin-left: 500px;
+}
+
+img {
+	border-radius: 50%;
+	height: 50%;
+	width: 25%;
+}
+/* .column {
+    float: left;
+    width: 53.33%;
+    padding: 5px;
+    margin-left: 200px;
+    size: 75%;
+  } 
+
+
+   .column{
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+    margin-left: 100px;
+    margin-top: 50px;
+  }  */
+
+/* Clear floats after image containers */
+.row::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 500px) {
+	.column {
+		width: 100%;
+	}
+}

@@ -1,0 +1,75 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    background-image: url('..images/pic7.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    text-align: center;
+    background-color: rgb(205, 133, 63);
+
+}
+
+p{
+    text-align: center;
+    
+}
+
+*{
+ margin: 0;   
+ padding: 0;
+ list-style: none;
+ text-decoration: none;
+
+}
+.sidebar{
+    position: fixed;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color:rgb(205, 133, 63);
+}
+.sidebar-header{
+    font-size: 22px;
+    color: white;
+    text-align: center;
+    line-height: 70px;
+    background-color: violet;
+    user-select: none;
+}
+.sidebar ul a{
+    display: block;
+    height: 100%;
+    width:100%;
+    line-height: 65px;
+    font-size: 20px;
+    color: white;
+    padding-left: 40px;
+    box-sizing: border-box;
+    border-top: 1px solid blue;
+    border-bottom: 1px solid black;
+    transition: .4s;
+
+}
+
+ul li:hover a{
+    padding-left: 50px;
+}
+.sidebar ul a i{
+    margin-right: 16px;
+}
+.sidebar a i{
+    margin-left: -10px;
+}
+
+a:hover{
+    width: 200px;
+    background: inherit;
+}
+
+.h1{
+    font-family: sans-serif;
+    margin-left: 150px;
+    margin-right: 200px;
+    margin-top: 200px;
+    margin-bottom: 200px;
+    padding-left: 150px;
+}
